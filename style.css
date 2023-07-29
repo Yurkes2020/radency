@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  padding: 20px;
+}
+
+.modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  padding: 15px;
+  background: rgb(219, 186, 186);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  margin-top: 10px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead {
+  background-color: rgb(148, 143, 137);
+  color: white;
+}
+
+th {
+  border: 3px solid rgb(83, 70, 170);
+}
+
+tr {
+  border: 3px solid rgb(83, 70, 170);
+}
+
+td {
+  border: 3px solid rgb(83, 70, 170);
+}
+
+.add {
+  margin-top: 10px;
+  float: right;
+}
+
+button {
+  cursor: pointer;
+}

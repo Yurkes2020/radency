@@ -3,9 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
+    <div class="modal-box">
+      <div class="modal">
+        <form action="#">
+          <label for="name">Name</label>
+          <input id="name" type="text" />
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="1">Task</option>
+            <option value="2">Idea</option>
+            <option value="3">Quote</option>
+            <option value="4">Random thought</option>
+          </select>
+          <label for="content">Content</label>
+          <textarea id="content" name="content" rows="5" cols="33"> </textarea>
+          <button>Add note</button>
+        </form>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Created</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button class="add">Create Note</button>
     <script src="index.js"></script>
   </body>
 </html>
