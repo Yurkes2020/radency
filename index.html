@@ -9,19 +9,26 @@
   <body>
     <div class="modal-box">
       <div class="modal">
+        <img
+          width="20"
+          height="20"
+          class="close"
+          src="./icons/close.svg"
+          alt="close"
+        />
         <form action="#">
           <label for="name">Name</label>
           <input id="name" type="text" />
           <label for="category">Category</label>
           <select id="category" name="category">
-            <option value="1">Task</option>
-            <option value="2">Idea</option>
-            <option value="3">Quote</option>
-            <option value="4">Random thought</option>
+            <option value="Task">Task</option>
+            <option value="Idea">Idea</option>
+            <option value="Quote">Quote</option>
+            <option value="Random thought">Random thought</option>
           </select>
           <label for="content">Content</label>
           <textarea id="content" name="content" rows="5" cols="33"> </textarea>
-          <button>Add note</button>
+          <button class="addNote">Add note</button>
         </form>
       </div>
     </div>

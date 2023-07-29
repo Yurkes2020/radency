@@ -57,9 +57,29 @@ const data = [
   },
 ];
 
-const list = document.querySelector('tbody');
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
 
-console.log(list);
+const list = document.querySelector('tbody'),
+  newNote = document.querySelector('.add'),
+  modal = document.querySelector('.modal-box'),
+  close = document.querySelector('.close'),
+  addNote = document.querySelector('.addNote'),
+  input = document.querySelector('input'),
+  select = document.querySelector('select'),
+  textArea = document.querySelector('textarea');
 
 const markup = data
   .map(
@@ -106,3 +126,38 @@ const markup = data
   .join('');
 
 list.insertAdjacentHTML('beforeend', markup);
+
+newNote.addEventListener('click', () => {
+  modal.classList.add('show');
+});
+
+close.addEventListener('click', () => {
+  modal.classList.remove('show');
+});
+
+addNote.addEventListener('click', (e) => {
+  e.preventDefault();
+  let noteName = input.value,
+    noteCategory = select.value,
+    noteContent = textArea.value,
+    regExp = new RegExp(
+      /(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[ \/\.\-](\d{4}$)/g
+    ),
+    parseDate = noteContent.match(regExp);
+
+  if (noteName || noteContent) {
+    let newDate = new Date(),
+      month = months[newDate.getMonth()],
+      day = newDate.getDate(),
+      year = newDate.getFullYear();
+
+    let noteInfo = {
+      name: noteName,
+      created: `${month} ${day}, ${year}`,
+      category: noteCategory,
+      content: noteContent,
+      dates: parseDate || '',
+    };
+    console.log(parseDate);
+  }
+});
